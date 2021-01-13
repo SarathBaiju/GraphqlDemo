@@ -6,7 +6,7 @@ namespace GraphqlDemo.Graphql.Types
     {
         public CustomerInputGraphType()
         {
-            Name = "CustomerInput";
+            Name = "CustomerInputModel";
             Field<NonNullGraphType<StringGraphType>>("name");
             Field<NonNullGraphType<IntGraphType>>("age");
         }

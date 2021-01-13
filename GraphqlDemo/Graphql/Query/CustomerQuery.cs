@@ -12,7 +12,7 @@ namespace GraphqlDemo.Graphql.Query
     {
         public CustomerQuery()
         {
-            Name = "Query";
+            Name = "CustomerQuery";
             Field<ListGraphType<CustomerGraphType>>("customers", "to get list of customer", resolve: context => GetDummyCustomer());
             Field<CustomerGraphType>("customer","to get a single customer by id", new QueryArguments(
                     new QueryArgument<NonNullGraphType<IntGraphType>>
