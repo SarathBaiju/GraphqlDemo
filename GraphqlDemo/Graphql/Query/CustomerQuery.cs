@@ -1,5 +1,6 @@
 ﻿using GraphQL;
 using GraphQL.Types;
+using GraphqlDemo.DataAccess;
 using GraphqlDemo.Graphql.Types;
 using GraphqlDemo.Models;
 using System.Collections.Generic;
@@ -23,9 +24,8 @@ namespace GraphqlDemo.Graphql.Query
         }
         private List<Customer> GetDummyCustomer()
         {
-            var customer1 = new Customer { Id = 1, Name = "Sarath" };
-            var customer2 = new Customer { Id = 2, Name = "Saranya" };
-            return new List<Customer> { customer1, customer2 };
+            var customerRepository = new CustomerRepository();
+            return customerRepository.GetCustomers();
         }
     }
 

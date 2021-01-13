@@ -10,6 +10,7 @@ namespace GraphqlDemo.Graphql.Types
             Name = "Customer";
             Field(c => c.Id);
             Field(c => c.Name);
+            Field(c => c.Age);
         }
     }
 }
